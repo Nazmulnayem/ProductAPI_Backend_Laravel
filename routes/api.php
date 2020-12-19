@@ -24,4 +24,6 @@ Route::group(['middleware' => 'api'], function () {
     Route::post('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::apiResource('product','API\ProductController');
+    Route::post('/update-product',[ProductController::class,'updateproduct'])->name('update-product');
+
 });
